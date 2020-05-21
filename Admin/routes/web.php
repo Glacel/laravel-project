@@ -20,10 +20,10 @@ Auth::routes();
 
 Route::group(['middleware'=> ['auth','admin']],function(){
     
-    Route::get('/dashboard','AccountController@index');
+    Route::resource('admin', 'AccountController');
     
 });
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/user/activation/{token}', 'Auth\RegisterController@userActivation');
-Route::get('/userprofile', 'ProfileController@index' );
+
 

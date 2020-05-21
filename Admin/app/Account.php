@@ -4,8 +4,9 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Account extends Model
+class Student extends Model
 {
-    protected $table='users';
-    
+    protected $fillable = [
+        'firstname','lastname', 'email','username','password','birthdayDate', 'birthdayMonth','birthdayYear','contactnumber','streetaddress','cityaddress','provinceaddress','usertype','status',
+    ];
 }
